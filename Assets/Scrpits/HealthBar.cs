@@ -13,4 +13,8 @@ public class HealthBar : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    void helloworld()
+    {
+    }
 }
