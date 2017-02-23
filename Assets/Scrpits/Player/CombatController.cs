@@ -16,20 +16,30 @@ public class CombatController : MonoBehaviour
     [SerializeField]
     private int m_iCurrentIndex;
 
-    private void Start()
-    {
-
-    }
+    GameObject m_LeftMouse;
+    GameObject m_RightMouse;
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("AttackLeft") && m_LeftMouse == null && m_RightMouse == null)
         {
-            Instantiate(m_Spells[m_EquipedSpells[m_iCurrentIndex]], m_AttackPoint.position, m_AttackPoint.rotation);
+            m_LeftMouse = Instantiate(m_Spells[m_EquipedSpells[m_iCurrentIndex]], m_AttackPoint.position, m_AttackPoint.rotation);
+            m_LeftMouse.transform.parent = m_AttackPoint.transform;
         }
-        else if (Input.GetButtonDown("Fire2"))
+        else if (Input.GetButtonDown("AttackRight") && m_LeftMouse == null && m_RightMouse == null)
         {
-            Instantiate(m_Spells[m_EquipedSpells[m_iCurrentIndex+1]], m_AttackPoint.position, m_AttackPoint.rotation);
+            m_RightMouse = Instantiate(m_Spells[m_EquipedSpells[m_iCurrentIndex+1]], m_AttackPoint.position, m_AttackPoint.rotation);
+            m_RightMouse.transform.parent = m_AttackPoint.transform;
+        }
+
+        if (m_LeftMouse != null && Input.GetButtonUp("AttackLeft"))
+        {
+            Destroy(m_LeftMouse);
+        }
+
+        if (m_RightMouse != null && Input.GetButtonUp("AttackRight"))
+        {
+           Destroy(m_RightMouse);
         }
 
         if (Input.GetButtonDown("SwitchSkills"))

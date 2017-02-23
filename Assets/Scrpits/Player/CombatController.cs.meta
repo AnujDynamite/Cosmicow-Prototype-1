@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bfdcb32b59352ca46893f192daff64be
+timeCreated: 1487812405
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - m_AttackPoint: {fileID: 4004488055937822, guid: e941fbf33e9d7524e9115c2848d10132,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
