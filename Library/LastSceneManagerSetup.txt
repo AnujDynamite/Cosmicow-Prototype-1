@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Levels/DevLvl.unity
+- path: Assets/Levels/AnujScene.unity
   isLoaded: 1
   isActive: 1

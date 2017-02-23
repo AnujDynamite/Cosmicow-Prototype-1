@@ -4,17 +4,29 @@ using UnityEngine;
 
 public class HealthBar : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+    [SerializeField]
+    private float totalHP;
+
+    [SerializeField]
+    private float currentHP;
+
+    // Use this for initialization
+    void Start ()
+    {
+
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update ()
+    {
+		if (Input.GetMouseButtonDown(0) && currentHP > 0)
+        {
+            TakeDamage(-10);
+        }
 	}
 
-    void helloworld()
+    void TakeDamage(int _Damage)
     {
+        currentHP += _Damage;
     }
 }
