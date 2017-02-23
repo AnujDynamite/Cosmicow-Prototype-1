@@ -75,6 +75,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CombatController.cs" />
     <Compile Include="Assets\Scrpits\HealthBar.cs" />
     <Compile Include="Assets\Scrpits\ManaBar.cs" />
     <Compile Include="Assets\Scrpits\Player\PlayerController.cs" />

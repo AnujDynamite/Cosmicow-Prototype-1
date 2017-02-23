@@ -103,18 +103,6 @@ public class PlayerController : MonoBehaviour
             }
             
         }
-
-        if (Input.GetButtonDown("Dash"))
-        {
-            if (Input.GetAxis("MoveHor") > 0)
-            {
-                m_CamPivot.transform.rotation = Quaternion.RotateTowards(m_CamPivot.transform.rotation, transform.rotation * Quaternion.Euler(Vector3.forward * (m_fLeanAngle+100)), m_fLeanStep * Time.deltaTime);
-            }
-            else if (Input.GetAxis("MoveHor") < 0)
-            {
-                m_CamPivot.transform.rotation = Quaternion.RotateTowards(m_CamPivot.transform.rotation, transform.rotation * Quaternion.Euler(Vector3.forward * (-m_fLeanAngle+100)), m_fLeanStep * Time.deltaTime);
-            }
-        }
     }
 
     public void MouseLock(int _LockType)
