@@ -80,7 +80,11 @@
     <Compile Include="Assets\Scrpits\ManaBar.cs" />
     <Compile Include="Assets\Scrpits\Player\CombatController.cs" />
     <Compile Include="Assets\Scrpits\Player\PlayerController.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\Spells\SimpleSpell\SimpleSpell.cs" />
+=======
+    <Compile Include="Assets\Scrpits\SkillPoints.cs" />
+>>>>>>> master
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
